@@ -7,7 +7,7 @@
 # on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and limitations under the License.
 
-project(metavision_file_to_csv_parallel)
+project(metavision_file_to_csv)
 
 cmake_minimum_required(VERSION 3.5)
 
@@ -15,8 +15,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(MetavisionSDK COMPONENTS core driver REQUIRED)
 find_package(Boost COMPONENTS program_options REQUIRED)
-find_package(Threads REQUIRED)
 
-set (sample metavision_file_to_csv_parallel)
+set (sample metavision_file_to_csv)
 add_executable(${sample} ${sample}.cpp)
 target_link_libraries(${sample} MetavisionSDK::core MetavisionSDK::driver Boost::program_options)
